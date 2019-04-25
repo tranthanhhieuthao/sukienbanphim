@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<form>
+<input type="number" id="thang"/>
+<input type="button"  value="Tính số ngày" onclick="ham()"/>
+    <br/>
+    <p id="result"></p>
+</form>
+<script>
+function ham() {
+    let thang=parseInt(document.getElementById("thang").value);
+    let ketqua;
+    switch (thang) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            ketqua="tháng này có 31 ngày";
+            document.getElementById("result").innerHTML=ketqua;
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            ketqua="tháng này có 30 ngày";
+            document.getElementById("result").innerHTML=ketqua;
+            break;
+        case 2:
+            ketqua="Tháng 2 có 28 hoặc 29 ngày";
+            document.getElementById("result").innerHTML=ketqua;
+            break;
+        default:
+            ketqua="Mời bạn nhập lại giá tri không đúng";
+            document.getElementById("result").innerHTML=ketqua;
+    }
+}
+</script>
+</body>
+</html>
